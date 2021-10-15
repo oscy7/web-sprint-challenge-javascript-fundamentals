@@ -26,13 +26,44 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map() - this method is useful for creating a new array from an existing array. It does NOT manipulate existing array and it needs a return keyword. With this method one can manipulate the existing array and perform an operation on each element. For example, if I have a dataset of a passenger names of a cruise ship and the data is dirty where the passenger names are all lowercase, I can use .map() to manipulate passenger names so that theyre gramatically correct.
+
+.filter() - this method also returns a new array but does not manipulate the original array. It simply filters out results into a new array. In other words, if the condition is true, it will include the item into the new array. If false, it will be excluded. Using the cruise ship example from above, if i wanted to give a child discount for passengers 12 and younger, i can use filter() to return an array with the name of passengers who are 12 and younger. 
+
+.reduce() - this method also does not return a new array; however, it returns a single value. It is used for addition and multiplication purposes. For example, if I wanted to add the number of passengers from fiscal year 2018 through 2021, I can use .reduce on that data to add up the number of people buy tickets for my cruise ship business. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that receives other functions as a parameter. Whereas a callback is a function that is intended to be passed into other functions as arguments. Higher order functions receives, and callbacks are passed in. 
 
 3. Explain what a closure is.
 
+Closure is being able to reference a specific variable or values outside of a scope or curly braces. For example, an inner function is able to reference a variable in an outer function to order to run a program. When a function is called, a function needs information in order to run. A closure is NOT when a function is self contained where it depends on its own arguments. However, when theres data being referenced outside of the scope of the function, closure is used to feed that outside information into the function.
+
 4. Describe the four principles of the 'this' keyword.
+This is a keyword that references another value in an object. The four principles are the following:
+
+1)Window Binding - if no other rules apply, 'this' defaults to the window (unless youre in strict mode it returns undefined). When used on the console, the window object gets returned. 
+
+2)Implicit Binding - Applies when youre using a method. When the method is invoked, the object 'this' is referring to is to the left of the dot. 
+
+3)Explicit Binding- We explicitly tell javascript what 'this' is being referred to. We use these methods to for explicit binding: 
+.call() . apply() .bind(). 
+
+Call will invoke the function immediately and arguments are passed one by one. We can also use Call() to invoke a method which allows us to "borrow" a method from one object and then use it on another object.
+
+Apply is similar in that both immediately invoke a function in scope of first argument; however, call() is limited if you dont know the number of arguments. Apply() takes an array of arguments. 
+
+.bind() also lets you pass arguments one by one but will not invoke the function immediately. This returns a new function that can be invoked later.
+
+4)New Binding - 
+When a function is invoked with the new keyword, the this is bound to the new object being constructed. 'This' points to the new object thats is being created. By using the new keyword, a new object is constructed and 'this' points to it. 
+
+
+
 
 5. Why do we need super() in an extended class?
+When we are making child classes, super is needed because it is what parent.call does. It is used to access and call functions on an object's parent. Without it one cannot make a child class that inherits Parent attributes. Extend in class syntax tells super what to super to. Overall, it is reference to the parent class (super class). It is also helpful to use in order to reduce repeat code. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

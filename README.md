@@ -34,7 +34,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Explain the difference between a callback and a higher order function.
 
-A higher order function is a function that receives other functions as a parameter. Whereas a callback is a function that is intended to be passed into other functions as arguments. Higher order functions receives, and callbacks are passed in. 
+A higher order function is a function that receives other functions as a parameter. Whereas a callback is a function that is intended to be passed into other functions as arguments. Higher order functions receives a callback, and callbacks are passed into higher orders. 
 
 3. Explain what a closure is.
 
@@ -50,9 +50,9 @@ This is a keyword that references another value in an object. The four principle
 3)Explicit Binding- We explicitly tell javascript what 'this' is being referred to. We use these methods to for explicit binding: 
 .call() . apply() .bind(). 
 
-Call will invoke the function immediately and arguments are passed one by one. We can also use Call() to invoke a method which allows us to "borrow" a method from one object and then use it on another object.
+.call() will invoke the function immediately and arguments are passed one by one. We can also use Call() to invoke a method which allows us to "borrow" a method from one object and then use it on another object.
 
-Apply is similar in that both immediately invoke a function in scope of first argument; however, call() is limited if you dont know the number of arguments. Apply() takes an array of arguments. 
+.apply() is similar in that both immediately invoke a function in scope of first argument; however, call() is limited if you dont know the number of arguments. Apply() takes an array of arguments. 
 
 .bind() also lets you pass arguments one by one but will not invoke the function immediately. This returns a new function that can be invoked later.
 
@@ -63,6 +63,7 @@ When a function is invoked with the new keyword, the this is bound to the new ob
 
 
 5. Why do we need super() in an extended class?
+
 When we are making child classes, super is needed because it is what parent.call does. It is used to access and call functions on an object's parent. Without it one cannot make a child class that inherits Parent attributes. Extend in class syntax tells super what to super to. Overall, it is reference to the parent class (super class). It is also helpful to use in order to reduce repeat code. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
